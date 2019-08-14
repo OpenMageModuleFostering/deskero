@@ -34,4 +34,5 @@ class Deskero_Deskero_Block_Adminhtml_Ticket_Create_Create extends Mage_Adminhtm
     {
         return $this->getUrl('*/*/save', array('_current' => true, 'back' => null));
     }
+    
 }

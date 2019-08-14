@@ -90,20 +90,27 @@ class Deskero_Deskero_Block_Adminhtml_Ticket_Create_Form extends Mage_Adminhtml_
 				
 				if ($values) {				
 							    
-			    $fieldset->addField('type', 'select', array(
-		            'name'     => 'type',
-		            'label'    => $this->__('Type'),
-		            'title'    => $this->__('Type'),
-		            'required' => true,
-		            'values'   => $values
-		            
-		        ));
+				    $fieldset->addField('type', 'select', array(
+			            'name'     => 'type',
+			            'label'    => $this->__('Type'),
+			            'title'    => $this->__('Type'),
+			            'required' => true,
+			            'values'   => $values
+			            
+			        ));
 	        
-	        }
+				}
 	        
+		    } else {
+			    
+			    $apiError = true;
 		    }
 		    
 		    
+		} else {
+			
+			$apiError = true;
+			
 		}
 
         $fieldset->addField('description', 'textarea', array(
@@ -113,14 +120,31 @@ class Deskero_Deskero_Block_Adminhtml_Ticket_Create_Form extends Mage_Adminhtml_
             'required' => true
         ));
 		
-		$form->setValues(Mage::getSingleton('adminhtml/session')->getData('createTicket_form'));
+		if (!$apiError) {
+			
+			$notifyText = $this->__('Oops! ');
+			$notifyText .= "<br/>".$this->__('Error in API connection! Please check your API configuration, or contact support@deskero.com');
+			
+			Mage::getSingleton('adminhtml/session')->addError($notifyText);
+			
+			Mage::app()->getResponse()->setRedirect(Mage::getBaseUrl()."/admin/system_config/edit/section/deskero_settings");
+					
+		} else {
+			
+			$form->setValues(Mage::getSingleton('adminhtml/session')->getData('createTicket_form'));
         
-        Mage::getSingleton('adminhtml/session')->setData('createTicket_form','');
-        
-        $form->setUseContainer(true);
-        $form->setMethod('post');
-        $this->setForm($form);
-        return parent::_prepareForm();
+	        Mage::getSingleton('adminhtml/session')->setData('createTicket_form','');
+	        
+	        $form->setUseContainer(true);
+	        $form->setMethod('post');
+	        $this->setForm($form);
+	        return parent::_prepareForm();
+			
+		}
+		
+		
+		
+		
     }
 
 }

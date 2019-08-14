@@ -40,3 +40,4 @@
 "No data sended!","Nessun dato inviato!"
 "To launch Deskero, set YOUR DESKERO DOMAIN, TOKEN SSO and AGENT EMAIL!","Per avviare Deskero, imposta il TUO DOMINIO IN DESKERO, il TOKEN SSO e l'EMAIL AGENTE!"
 "To create a new ticket, set CLIENT ID and API TOKEN!","Per creare un nuovo ticket, imposta il tuo CLIENT ID e il TOKEN API!"
+"Error in API connection! Please check your API configuration, or contact support@deskero.com","Errore nella connessione alle API. Controlla la tua configurazione API o invia una email a support@deskero.com"

@@ -38,11 +38,28 @@ class Deskero_Deskero_Adminhtml_DeskeroController extends Mage_Adminhtml_Control
     
     public function createTicketAction() {
     	
-    	$this->loadLayout();
-		$this->_title($this->__("Create Ticket"));
-		$this->_addContent($this->getLayout()->createBlock('deskero/adminhtml_ticket_create_create'));
-        $this->_addLeft($this->getLayout()->createBlock('deskero/adminhtml_menu'));
-		$this->renderLayout();
+    	$apiToken = Mage::getStoreConfig('deskero_settings/deskero_general_settings/deskero_api_token');
+		$clientID = Mage::getStoreConfig('deskero_settings/deskero_general_settings/deskero_clientid');
+		
+		if ($apiToken == "" || $clientID == "") {
+			
+			$notifyText = $this->__('Oops! ');
+			$notifyText .= "<br/>".$this->__('To create a new ticket, set CLIENT ID and API TOKEN!');
+			
+			Mage::getSingleton('adminhtml/session')->addError($notifyText);
+			
+			$this->_redirect('adminhtml/system_config/edit/section/deskero_settings');	
+			
+		} else {
+			
+			$this->loadLayout();
+			$this->_title($this->__("Create Ticket"));
+			$this->_addContent($this->getLayout()->createBlock('deskero/adminhtml_ticket_create_create'));
+	        $this->_addLeft($this->getLayout()->createBlock('deskero/adminhtml_menu'));
+			$this->renderLayout();
+		
+		}
+    	
 
     }
     

@@ -39,3 +39,5 @@
 "Description is required!","Description is required!"
 "No data sended!","No data sended!"
 "To launch Deskero, set YOUR DESKERO DOMAIN, TOKEN SSO and AGENT EMAIL!","To launch Deskero, set YOUR DESKERO DOMAIN, TOKEN SSO and AGENT EMAIL!"
+"To create a new ticket, set CLIENT ID and API TOKEN!","To create a new ticket, set CLIENT ID and API TOKEN!"
+"Error in API connection! Please check your API configuration, or contact support@deskero.com","Error in API connection! Please check your API configuration, or contact support@deskero.com"
