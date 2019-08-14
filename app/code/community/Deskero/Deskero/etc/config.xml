@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Deskero_Deskero>
+      <version>0.1.0</version>
+    </Deskero_Deskero>
+  </modules>
+  <global>
+     <helpers>
+      <deskero>
+        <class>Deskero_Deskero_Helper</class>
+      </deskero>
+    </helpers>
+	<blocks>
+	  <deskero>
+		<class>Deskero_Deskero_Block</class>
+	  </deskero>
+	</blocks>
+  </global>
+  
+  <frontend>
+    <layout>
+        <updates>
+            <deskero>
+                <file>deskero.xml</file>
+            </deskero>
+        </updates>
+    </layout>
+ </frontend>
+    
+  <admin>
+	<routers>
+	  <deskero>
+	    <use>admin</use>
+		<args>
+		  <module>Deskero_Deskero</module>
+		  <frontName>deskero</frontName>
+		</args>
+	  </deskero>
+	</routers>
+  </admin>
+  <adminhtml>
+  	
+  	<layout>
+	  <updates>
+		<deskero>
+		  <file>deskero.xml</file>
+		</deskero>
+	  </updates>
+	</layout>
+	<translate>
+        <modules>
+            <Deskero_Deskero>
+                <files>
+                    <default>Deskero_Deskero.csv</default>
+                </files>
+            </Deskero_Deskero>
+        </modules>
+    </translate>
+    
+	<menu>
+	  <deskero module="deskero">
+		<title>Deskero</title>
+		<sort_order>100</sort_order>
+		<children>
+		  
+		  <deskero module="deskero">
+			<title>Deskero Settings</title>
+			<sort_order>1</sort_order>
+			<action>adminhtml/system_config/edit/section/deskero_settings</action>
+		  </deskero>
+		  
+		  <deskerolaunch module="deskero">
+	      	<title>Launch Deskero</title>
+	        <action>deskero/adminhtml_deskero/launch</action>
+	        <sort_order>2</sort_order>
+	      </deskerolaunch>
+          
+          <deskerocreateticket module="deskero">
+	      	<title>Create Ticket</title>
+	        <action>deskero/adminhtml_deskero/createTicket</action>
+	        <sort_order>3</sort_order>
+	      </deskerocreateticket>
+	              
+		</children>
+	  </deskero>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<deskero translate="title" module="deskero">
+			  <title>Deskero</title>
+			  <sort_order>999</sort_order>
+			  <children>
+			  	
+			  	<deskero translate="title">
+					<title>Deskero Settings</title>
+				</deskero>
+		  		
+		  		<deskerolaunch translate="title">
+		  			<title>Launch Deskero</title>
+		  		</deskerolaunch>
+		  		
+		  		<deskerocreateticket translate="title">
+		  			<title>Create Ticket</title>
+		  		</deskerocreateticket>
+		  
+			  </children>
+			</deskero>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	
+	</adminhtml>
+</config> 

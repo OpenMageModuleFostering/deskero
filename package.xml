@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+    <name>Deskero</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Deskero for Magento is a customized extension to integrate your Deskero help desk into your Magento website.</summary>
+    <description>&lt;p&gt;&lt;b&gt;Deskero&lt;/b&gt; is an innovative cloud-based &lt;b&gt;help desk software&lt;/b&gt; born from an innovative idea: creating a &lt;b&gt;new kind of relationship with customers&lt;/b&gt; that really focuses on their needs.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Emails, phone calls, chats, web sites, social networks: through Deskero every message from your customers will be instantly accessible with a few clicks!&lt;/p&gt;&#xD;
+ &#xD;
+&lt;p&gt;This extension lets you manage all the customers&#x2019; requests with Deskero, the cloud-based help desk software that offers companies simple and effective tools to make customer care easier, quicker and more modern.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#xD;
+&lt;b&gt;Features include:&lt;/b&gt;&lt;br /&gt;&#xD;
+- Enable Single Sign-on for administrators&lt;br /&gt;&#xD;
+- Add support tickets in every moment while on Magento website&lt;br /&gt;&#xD;
+- Gather feedback directly from your Magento website through Deskero widget&lt;br /&gt;&#xD;
+&lt;/p&gt;&#xD;
+ &#xD;
+&lt;p&gt;Deskero extension for Magento is available only to Business or Power users.&lt;/p&gt;</description>
+    <notes>First release</notes>
+    <authors><author><name>Fausto Iannuzzi</name><user>faustoiannuzzi</user><email>fausto@deskero.com</email></author></authors>
+    <date>2013-08-28</date>
+    <time>10:30:02</time>
+    <contents><target name="magecommunity"><dir name="Deskero"><dir name="Deskero"><dir name="Block"><dir name="Adminhtml"><file name="Menu.php" hash="2272bbc9281bfac7194a0817cdee2d88"/><dir name="Ticket"><dir name="Create"><file name="Create.php" hash="ac26abca01db34e24831fc5d31fb6c36"/><file name="Form.php" hash="7dadd1df6ff2817c00808fa2d0396bf5"/></dir></dir></dir><file name="Widget.php" hash="0abcc9c7e1852be5b0b69a4b244bb430"/></dir><dir name="Helper"><file name="Data.php" hash="61b36df7759d319fd25e1a58850fbd30"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="DeskeroController.php" hash="21864e4abc6954301f831858d38033c8"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="b93362d17b15de9a869a8454d38e9ab2"/><file name="config.xml" hash="f999300462a8af5375a6af81481743bc"/><file name="system.xml" hash="1fbe3307eb6be5e043eaf2cbb7bd8f34"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="deskero.xml" hash="dcdec81f7fcc34fb1a2dc9f218360eef"/></dir><dir name="template"><dir name="deskero"><file name="left-menu.phtml" hash="b355e7457cfef5579b342f9a5f9511d4"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="deskero.xml" hash="f1c745105450382b869723f9743e27fe"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Deskero_Deskero.xml" hash="7ccffebaf8d06567bd340bc29f583b59"/></dir></target><target name="magelocale"><dir><dir name="en_US"><file name="Deskero_Deskero.csv" hash="8d384bc914d6b7d0b09ad28c7b864071"/></dir><dir name="it_IT"><file name="Deskero_Deskero.csv" hash="0cea6f325b6c15df4db3b17e2aeaa447"/></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="deskero"><file name="deskero-menu.png" hash="ccb5b77f7074fa8ace567ec5dc28bd54"/><file name="deskero.css" hash="9e87ec2d6645f48089661212d0521e21"/><file name="header-logo.png" hash="1777ad0345115961079a14a4c62eac1e"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

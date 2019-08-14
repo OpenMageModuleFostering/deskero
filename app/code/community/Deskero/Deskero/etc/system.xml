@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<deskero translate="label" module="deskero">
+            <label>Deskero</label>
+            <sort_order>999</sort_order>
+        </deskero>
+	  </tabs>
+	  <sections>
+		
+		<deskero_settings  translate="label" module="deskero">                    
+		<label>Settings</label>
+		<class>deskero-section</class>
+		<header_css>deskero-header</header_css>
+		<tab>deskero</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>999</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+					  
+					  <deskero_general_settings translate="label"> 
+					  <label>General Setting</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>1</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+				       
+                          <deskero_subdomain translate="label">
+                            <label>Your Deskero Domain</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Your Deskero Domain. Example: https://yourdomain.deskero.com</comment>
+                          </deskero_subdomain>
+                          
+                          <deskero_clientid translate="label">
+                            <label>Client ID</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Find your Client ID in Deskero on Settings > Security Settings > API management</comment>
+                          </deskero_clientid>
+                          
+                          <deskero_api_token translate="label">
+                            <label>API Token</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Find your API Token in Deskero on Settings > Security Settings > API management</comment>
+                          </deskero_api_token>
+                          
+					   </fields>
+					  </deskero_general_settings>
+					   
+				      <deskero_widget_settings translate="label"> 
+					  <label>Widget Setting</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>2</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <deskero_widget_active translate="label">
+                            <label>Widget Active</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>If YES, the widget will be shown on all pages.</comment>
+                          </deskero_widget_active>
+                          
+                          <deskero_widget translate="label">
+                            <label>Widget Code</label>
+							<frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Login to Deskero, go to Settings > Feedback Widget and copy here your widget embed code.</comment>
+                          </deskero_widget>
+					   </fields>
+					   </deskero_widget_settings>
+					   
+					   
+					  <deskero_sso_settings translate="label"> 
+					  <label>SSO Setting</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>3</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+				       
+                          <deskero_sso_token translate="label">
+                            <label>SSO Token</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Find your SSO Token in Deskero on Settings > Security Settings > Shared authentication</comment>
+                          </deskero_sso_token>
+                          
+                          <deskero_sso_email translate="label">
+                            <label>Agent Email</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Your Agent Email in Deskero</comment>
+                          </deskero_sso_email>
+                          
+					   </fields>
+					  </deskero_sso_settings>
+					  
+					  
+					</groups>
+		</deskero_settings>
+	  </sections>
+</config>

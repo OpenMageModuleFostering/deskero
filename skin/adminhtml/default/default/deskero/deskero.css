@@ -1,0 +1,29 @@
+ul.tabs a.deskero-section,
+ul.tabs a.deskero-section:hover {
+    border-bottom: 1px solid #BEBEBE;
+    padding: 0.5em 0.5em 0 1.5em;
+    text-indent: -9999px;
+}
+
+ul.tabs a.deskero-section.active, 
+ul.tabs a.deskero-section.active:hover {
+    background: none repeat scroll 0 0 white;
+}
+
+ul.tabs a.deskero-section span,
+ul.tabs a.deskero-section:hover span { 
+    background:url(deskero-menu.png) no-repeat 0 0;
+    overflow:hidden; 
+    padding:0; 
+    width:120px; 
+    height:22px;
+}
+
+
+h3.deskero-header {
+    background: url(header-logo.png) no-repeat;
+    width: 231px;
+    height: 65px;
+    padding: 0;
+    text-indent: -9999px;
+}
