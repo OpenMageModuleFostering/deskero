@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Deskero",
+    "name": "OpenMageModuleFostering\/Deskero",
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
     "description": "Deskero for Magento is a customized extension to integrate your Deskero help desk into your Magento website.",
     "authors": [
-    {
-        "name": "Fausto Iannuzzi",
-        "email": "fausto@deskero.com"
-    }
-],
+        {
+            "name": "Fausto Iannuzzi",
+            "email": "fausto@deskero.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
